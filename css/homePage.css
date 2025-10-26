@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Chivo:ital,wght@0,100..900;1,100..900&family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'poppins';
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #17153B;
+    color: aliceblue;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #242157;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    margin: 0;
+    padding: 1rem 4%;
+}
+
+.MyPorto {
+    margin-left: 10px;
+    font-size: 3rem;
+    background: linear-gradient(25deg, #eee8f1, #6863a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800px;
+    transition: 0.5s ease;
+}
+
+.MyPorto:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-left: 4rem;
+    list-style: none;
+    text-align: center;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+    color: #eeedff;
+}
+
+.link {
+    display: inline-block;
+    margin-block: 2px;
+    text-decoration: none;
+    color: #8d87cc;
+    position: relative;
+}
+
+.link::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform .35s ease;
+}
+
+.link:hover::after {
+    transform: scalex(1);
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 10% 5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.home-contant {
+    margin: auto;
+}
+
+.home .home-contant h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-contant p {
+    font-size: 1.8rem;
+    font-weight: 250;
+    margin: auto;
+}
+
+.nowrap1 {
+    color: #8d87cc;
+    white-space: nowrap;
+}
+
+.nowrap2 {
+    white-space: nowrap;
+}
+
+.home-img img {
+    position: relative;
+    width: 35vh;
+    margin-right: 3rem;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #8d87cc;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    transform: scale(1.1);
+    transition: transform .3s ease;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icon a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #8d87cc;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #8d87cc;
+}
+
+.social-icon a:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.3) translateY(-5px);
+    background-color: #34316c;
+    box-shadow: 0 0 5px #8d87cc;
+}
+
+@media (max-width: 1090px) {
+    .home {
+        display: flex;
+        justify-content: space-between;
+        gap: 8rem;
+        padding: 0;
+        margin: auto;
+        transform: scale(0.9);
+    }
+
+    .home-img img {
+        width: 42vh;
+    }
+    
+    .home .home-contant h1 {
+        font-weight: 700;
+        font-size: 3.5rem;
+        line-height: 1.3;
+        text-align: left;
+        margin: 0;
+    }
+
+    .home-contant {
+        margin: 0;
+    }
+    
+    .home-contant p {
+        font-size: 1.8rem;
+        font-weight: 250;
+        margin-top: 2rem;
+        text-align: left;
+    }
+
+    .social-icon {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        flex-direction: row;
+        gap: 3rem;
+    }
+  }
+
+@media (max-width: 999px) {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .MyPorto {
+        margin: 0;
+    }
+
+    nav a {
+        margin: 1rem;
+    }
+
+    .home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        gap: 2rem;
+        transform: scale(0.9);
+    }
+
+    .home-img img {
+        width: 32vh;
+        margin: 0;
+    }
+
+    .home .home-contant h1 {
+        font-weight: 490;
+        font-size: 2.1rem;
+        line-height: 1.3;
+        text-align: center;
+        margin: 0;
+    }
+
+    .home-contant p {
+        font-weight: 290;
+        font-size: 2rem;
+        text-align: center;
+        width: 98vh;
+    }
+
+    .social-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .social-icon a {
+        margin-right: 0;
+        margin-top: 3rem ;
+    }
+  }
+
+@media (max-width: 580px) {
+    .home {
+        gap: 4rem;
+        transform: scale(0.8);
+    }
+
+    .home-img img {
+        width: 30vh;
+    }
+
+    .home .home-contant h1 {
+        font-size: 2.0rem;
+    }
+
+    .home-contant p {
+        font-weight: 290;
+        font-size: 1.9rem;
+        text-align: center;
+        width: 68vh;
+    }
+
+  }
+
+@media (max-width: 425px) {
+    body {
+        width: 100%;
+        height: 100vh;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    .MyPorto {
+        font-size: 2rem;
+    }
+
+    nav a {
+        font-size: 1.9rem;
+        margin: 0.9rem;
+    }
+
+    .home {
+        gap: 2rem;
+        transform: scale(0.9);
+    }
+
+    .home-img img {
+        width: 22vh;
+    }
+
+    .home .home-contant h1 {
+        font-weight: 490;
+        font-size: 1.5rem;
+        line-height: 1.3;
+        text-align: center;
+        margin: 0;
+    }
+
+    .home-contant p {
+        font-weight: 290;
+        font-size: 1.6rem;
+        text-align: center;
+        width: 40vh;
+    }
+
+    .social-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+  }
+
+@media (max-width: 341px) {
+    .MyPorto {
+        font-size: 2rem;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+        margin: 0.9rem;
+    }
+
+    .home {
+        gap: 2rem;
+        transform: scale(0.9);
+    }
+
+    .home-img img {
+        width: 22vh;
+    }
+
+    .home .home-contant h1 {
+        font-weight: 490;
+        font-size: 1.5rem;
+        line-height: 1.3;
+        text-align: center;
+        margin: 0;
+    }
+
+    .home-contant p {
+        font-weight: 290;
+        font-size: 1.1rem;
+        text-align: center;
+        width: 49vh;
+    }
+
+    .social-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+  }

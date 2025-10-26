@@ -1,0 +1,854 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Chivo:ital,wght@0,100..900;1,100..900&family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* --- DESIGN ALL --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'poppins';
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #17153B;
+    color: aliceblue;
+}
+
+/* --- DESIGN HEADER --- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #242157;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    margin: 0;
+    padding: 1rem 4%;
+}
+
+.MyPorto {
+    margin-left: 10px;
+    font-size: 3rem;
+    background: linear-gradient(25deg, #eee8f1, #6863a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800px;
+    transition: 0.5s ease;
+}
+
+.MyPorto:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-left: 4rem;
+    list-style: none;
+    text-align: center;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+    color: #eeedff;
+}
+
+.link {
+    display: inline-block;
+    margin-block: 2px;
+    text-decoration: none;
+    color: #8d87cc;
+    position: relative;
+}
+
+.link::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform .35s ease;
+}
+
+.link:hover::after {
+    transform: scalex(1);
+}
+
+/* --- DESIGN MAIN --- */
+
+section {
+    min-height: 50vh;
+    padding: 4rem 5% 4rem;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-img img {
+    position: relative;
+    width: 38vh;
+    border-radius: 20%;
+    box-shadow: 0 0 20px #8d87cc;
+    cursor: pointer;
+    transition: 0.5s ease;
+    margin-top: 8.5rem;
+}
+
+.main-img img:hover {
+    transform: scale(1.1);
+}
+
+.main-content {
+    text-align: left;
+}
+
+.main-content h1{
+    font-size: 5rem;
+    color: #c2bfe2;
+    text-shadow: 0 0 10px #2b228f;
+}
+
+.colorMe{
+    color: #5f5aa7;
+}
+
+.nameModify {
+    font-size: 3.1rem;
+    font-weight: 800;
+}
+
+.colorModify {
+    color: #6057c3;
+}
+
+.fontSize {
+    font-size: 2.5rem;
+}
+
+.main-content p {
+    text-align: justify;
+    font-size: 1.8rem;
+    font-weight: 200;
+    width: 95%;
+    margin-top: 15px;
+}
+
+/* --- DESIGN INFORMATION --- */
+
+.myInformation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1rem;
+    padding: 1rem 5% 1rem;
+    min-height: 20px;
+}
+
+.boxInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(95, 90, 167, 0.3);
+    padding: 4.9rem;
+    border-radius: 10px;
+    border: 0.2rem solid #8d87cc;
+    transition: 0.3s ease;
+    color: #8d87cc;
+}
+
+.boxInfo:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.0) translateY(-2px);
+    background-color: #34316c;
+    box-shadow: 0 0 10px #8d87cc;
+}
+
+.boxInfo .icon {
+    font-size: 3rem; 
+    min-width: 40px;
+    text-align: center;
+    color: #8d87cc;
+}
+
+.boxInfo:hover .icon {
+    color: rgb(255, 255, 255);
+}
+
+.boxInfo span {
+    font-size: 2rem;
+}
+
+/* --- DESIGN SKILLS --- */
+
+.MySkills {
+    padding: 3rem 20% 3rem;
+}
+
+.MySkills h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-top: 3.5rem;
+    margin-bottom: 2rem;
+    color: #cfc9ff;
+    text-shadow: 0 0 10px #2b228f;
+}
+
+.skillGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.boxSkills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(95, 90, 167, 0.3);
+    padding: 1rem;
+    border-radius: 10px;
+    gap: 1rem;
+    transition: 0.5s ease;
+}
+
+.boxSkills:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #8d87cc;
+}
+
+.fontSylColor {
+    color: #5f5aa7;
+    text-shadow: 0 0 10px #2b228f;
+}
+
+.boxSkills img{
+    width: 5rem;
+}
+
+.boxSkills p{
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* --- DESIGN CERTIFICATE --- */
+.wrapperCerti {
+    padding: 3rem 10% 3rem;
+}
+
+.wrapperCerti h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 5rem;
+    color: #cfc9ff;
+    text-shadow: 0 0 10px #2b228f;
+}
+
+.wrapperColor {
+    color: #6057c3;
+}
+
+.MyCertiColumns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
+    align-items: stretch;
+}
+
+.MyCerti {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(95, 90, 167, 0.3);
+    padding: 0.9rem 0.5% 1rem;
+    border-radius: 10px;
+    height: 100%;
+    transition: 0.5s ease;
+}
+
+.MyCerti:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #8d87cc;
+}
+
+.MyCerti h1{
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.MyCerti h2{
+    font-size: 2rem;
+}
+
+.MyCerti p{
+    font-size: 2rem;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.MyCerti img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+.boxCerti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.boxCerti {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:rgba(102, 97, 192, 0.3);
+    padding: 1rem 5% 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+@media (max-width: 1280px) {
+    .wrapperCerti {
+        padding: 1rem 3% 1rem;
+    }
+    
+
+    .wrapperCerti h1 {
+        text-align: center;
+        font-size: 3.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .fontSize {
+        font-size: 1.5rem;
+    }
+
+    .myInformation {
+        padding: 1.9rem 5% 1.9rem;
+        min-height: 2rem;
+    }
+
+    .boxInfo {
+        padding: 1rem;
+    }
+
+    .boxInfo .icon {
+        font-size: 2.8rem; 
+    }
+
+    .boxInfo span {
+        font-size: 1.9rem;
+    }
+
+    .MyCertiColumns {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3rem;
+        align-items: stretch;
+    }
+
+    .MyCerti h1{
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        font-size: 2.1rem;
+    }
+    
+    .MyCerti h2{
+        font-size: 1.5rem;
+    }
+    
+    .MyCerti p{
+        font-size: 1rem;
+        width: 100%;
+    }
+    
+    .MyCerti img {
+        max-width: 90%;
+        margin-bottom: 1rem;
+    }
+    
+    .boxCerti {
+        padding: 1rem 5% 1rem;
+        margin: 1rem;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 965px) {
+    header {
+        display: flexbox;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .MyPorto {
+        margin: 0;
+    }
+
+    nav a {
+        margin: 1rem;
+    }
+
+    section {
+        min-height: 50vh;
+        padding: 2rem 2% 2rem;
+    }
+    
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 0.1rem;
+    }
+
+    .main-content h1,
+    .main-content h1 span{
+        margin: auto;
+        width: 90%;
+    }
+
+    .main-content h1{
+        font-size: 4rem;
+    }
+
+    .main-content p,
+    .main-content p span {
+        font-size: 135%;
+        margin: auto;
+        text-align: justify;
+        font-weight: 200;
+        width: 90%;
+    }
+
+    .main-content {
+        text-align: left;
+        margin: 1rem;
+    }
+
+    .main-img img {
+        position: relative;
+        width: 28vh;
+        border-radius: 20%;
+        margin: 1rem;
+    }
+
+    .myInformation {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.1rem;
+        padding: 3rem 10% 3rem;
+        min-height: 20px;
+    }
+    
+    .MyCertiColumns {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: flex-start; 
+        align-items: stretch;     
+        gap: 3rem;
+        overflow-x: auto;  
+        overflow-y: hidden; 
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;  
+        margin-right: auto; 
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+    }
+
+    .MyCertiColumns::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .MyCertiColumns::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+    }
+
+    .MyCertiColumns::-webkit-scrollbar-thumb {
+        background: #5f5aa7;
+        border-radius: 10px;
+    }
+
+    .MyCertiColumns::-webkit-scrollbar-thumb:hover {
+        background: #4a4791;
+    }
+
+    .MyCerti {
+        display: flex;
+        flex-direction: column; 
+        justify-content: flex-start;
+        align-items: center;
+        width: 520px;
+        height: 100%;
+        border-radius: 1px;
+        overflow: hidden;
+        background-color: rgba(95, 90, 167, 0.3);
+        padding: 0.9rem 0.5% 1rem;
+        border-radius: 10px;
+        transition: none;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+    }
+    
+    .MyCerti:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .MyCerti img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; 
+    }
+
+    .MyCerti h1{
+        margin: auto;
+        font-size: 2.1rem;
+    }
+    
+    .MyCerti h2{
+        margin: auto;
+        font-size: 1.5rem;
+    }
+    
+    .MyCerti p{
+        font-size: 1rem;
+        width: 100%;
+    }
+    
+
+    .MySkills {
+        padding: 2rem 5% 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center;
+        margin: 2rem auto;
+        width: 100%;
+        padding: 3rem;
+    }
+
+    .skillGrid {
+        display: flex;
+        overflow-x: auto;  
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        height: 220px;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        border: 1px solid #8d87cc;
+        padding: 0 1%;
+    }
+
+    .skillGrid::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .skillGrid::-webkit-scrollbar-track {
+        background: none;
+        border-radius: 10px;
+    }
+
+
+    .boxSkills {
+        flex-shrink: 0;
+        scroll-snap-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+
+    .boxSkills img {
+        width: 30%;
+    }
+
+    .boxSkills p {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 776px) {
+    .main {
+        margin: 2.5rem;
+    }
+
+    .main-content h1,
+    .main-content h1 span{
+        margin: auto;
+        width: 90%;
+    }
+
+    .main-content h1{
+        font-size: 3rem;
+    }
+
+    .main-content p,
+    .main-content p span {
+        font-size: 110%;
+        margin: auto;
+        margin-bottom: 5rem;
+        text-align: justify;
+        font-weight: 200;
+        width: 90%;
+    }
+
+    .main-content {
+        text-align: left;
+        margin-bottom: -5.5rem;
+    }
+
+    .main-img img {
+        position: relative;
+        width: 24vh;
+        border-radius: 20%;
+        margin: 1rem;
+        margin-top: -1rem;
+    }
+
+    .myInformation {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.1rem;
+        padding: 0.1rem 12% 0.1rem;
+        min-height: 20px;
+    }
+
+    .boxInfo {
+        padding: 1rem;
+    }
+
+    .boxInfo .icon {
+        font-size: 2rem; 
+        min-width: 50px;
+    }
+
+    .boxInfo span {
+        font-size: 1.5rem;
+    }
+
+    .MyCerti {
+        width: 350px;
+        height: 100%;
+        padding: 0.9rem 0.5% 0.5rem;
+    }
+
+    .MyCerti img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; 
+    }
+
+    .MyCerti h1{
+        margin: auto;
+        font-size: 1.5rem;
+    }
+    
+    .MyCerti h2{
+        margin: auto;
+        font-size: 1.1rem;
+    }
+    
+    .MyCerti p{
+        font-size: 0.6rem;
+        width: 95%;
+    }
+
+    .MySkills {
+        width: 100%;
+        padding: 8rem;
+    }
+
+    .skillGrid {
+        display: flex;
+        overflow-x: auto;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        height: 220px;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        padding: 0 1%; 
+    }
+
+    .skillGrid::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .skillGrid::-webkit-scrollbar-track {
+        background: none;
+        border-radius: 10px;
+    }
+
+
+    .boxSkills {
+        flex-shrink: 0;
+        scroll-snap-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 225px; 
+        height: 140px;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+
+    .boxSkills img {
+        width: 40%;
+    }
+
+    .boxSkills p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 461px) {
+    .MyPorto {
+        margin: 0;
+        font-size: 2.2rem;
+    }
+
+    nav a {
+        margin: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .main {
+        margin: 2.5rem;
+    }
+
+    .main-content h1,
+    .main-content h1 span{
+        margin: auto;
+        width: 90%;
+    }
+
+    .main-content h1{
+        font-size: 3rem;
+    }
+
+    .main-content p,
+    .main-content p span {
+        font-size: 100%;
+        margin: auto;
+        text-align: justify;
+        font-weight: 200;
+        width: 90%;
+    }
+
+    .main-content {
+        text-align: left;
+        margin: 1rem;
+    }
+
+    .main-img img {
+        position: relative;
+        width: 20vh;
+        border-radius: 20%;
+        margin: 1rem;
+    }
+
+    .myInformation {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.1rem;
+        padding: 0.1rem 14% 0.1rem;
+        margin-top: -4rem;
+        min-height: 20px;
+    }
+
+    .boxInfo {
+        padding: 0.8rem;
+    }
+
+    .boxInfo .icon {
+        font-size: 1.8rem; 
+        min-width: 50px;
+    }
+
+    .boxInfo span {
+        font-size: 1rem;
+    }
+
+    .skillGrid {
+        display: flex;
+        overflow-x: auto;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        height: 220px;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        padding: 0 50%; 
+    }
+
+    .skillGrid::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .skillGrid::-webkit-scrollbar-track {
+        background: none;
+        border-radius: 10px;
+    }
+
+
+    .boxSkills {
+        flex-shrink: 0;
+        scroll-snap-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px; 
+        height: 140px;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+
+    .boxSkills img {
+        width: 35%;
+    }
+
+    .boxSkills p {
+        font-size: 1.2rem;
+    }
+}
