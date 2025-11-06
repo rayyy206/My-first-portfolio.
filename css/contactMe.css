@@ -1,0 +1,379 @@
+/* Mengimpor font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* --- DESIGN ALL (Global Reset) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Mengubah basis font untuk memudahkan kalkulasi rem */
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* Warna latar belakang gelap dari contoh Anda */
+    background-color: #17153B; 
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container untuk menjaga konten tetap di tengah dan rapi */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+    width: 100%;
+}
+
+/* --- DESIGN HEADER --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Warna header gelap dari contoh Anda */
+    background-color: #242157; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    padding: 1rem 4%;
+}
+
+.MyPorto {
+    font-size: 3rem;
+    /* Gradient yang sama dari contoh Anda */
+    background: linear-gradient(25deg, #eee8f1, #6863a3); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    transition: 0.5s ease;
+}
+
+.MyPorto:hover {
+    transform: scale(1.05);
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem; /* Menggunakan gap untuk jarak antar link */
+}
+
+.link {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #8d87cc; /* Warna link default */
+    position: relative;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.link:hover {
+    color: #eeedff;
+}
+
+/* Efek garis bawah dari contoh Anda */
+.link::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform .35s ease;
+}
+
+.link:hover::after,
+.link.active-link::after { /* Terapkan juga pada link aktif */
+    transform: scaleX(1);
+}
+
+.link.active-link {
+    color: #eeedff; /* Warna link aktif */
+}
+
+/* --- CONTACT SECTION (MAIN) --- */
+main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+}
+
+.contact-card {
+    background-color: #242157; /* Warna latar belakang kartu yang lebih gelap */
+    padding: 4rem;
+    border-radius: 2rem;
+    /* Efek bayangan dan border dari contoh project Anda */
+    border: #5f5aa7 solid 3px; 
+    box-shadow: 0 0 15px #8d87cc;
+    width: 100%;
+    max-width: 768px;
+    transition: 0.3s ease;
+}
+
+.contact-card:hover {
+    box-shadow: 0 0 25px #8d87cc;
+}
+
+/* Title Section */
+.title-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title-section h1 {
+    font-size: 5.5rem;
+    color: #c2bfe2;
+    text-shadow: 0 0 10px #2b228f;
+    margin-bottom: 1rem;
+}
+
+.title-section p {
+    color: #c2bfe2;
+    font-size: 1.6rem;
+}
+
+/* Form Layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive Name Fields Container */
+.name-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.name-fields .form-group {
+    flex: 1 1 100%; /* Default: Full width on mobile */
+}
+
+/* Form Inputs Styling */
+label {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #c2bfe2;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    background-color: #3b3577; /* Warna input gelap */
+    color: aliceblue;
+    border: 1px solid #5f5aa7;
+    border-radius: 0.8rem;
+    outline: none;
+    transition: border-color 150ms, box-shadow 150ms;
+    box-sizing: border-box;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #a0aec0;
+}
+
+/* Focus state for inputs */
+input:focus, 
+textarea:focus {
+    border-color: #8d87cc;
+    box-shadow: 0 0 10px #8d87cc;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Submit Button Styling */
+.submit-button {
+    background-color: #5f5aa7;
+    color: white;
+    font-weight: 700;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 10px rgba(95, 90, 167, 0.5);
+    transition: background-color 300ms, transform 200ms, box-shadow 300ms;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+}
+
+.submit-button:hover {
+    background-color: #4a4791;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(95, 90, 167, 0.7);
+}
+
+/* Styling untuk ikon di dalam tombol (kirim pesan) */
+.submit-button i {
+    color: white; /* Pastikan ikon di tombol berwarna putih */
+    font-size: 1.8rem;
+}
+
+/* Social Icons Section */
+.social-icons-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #3b3577;
+    text-align: center;
+}
+
+.social-icons-section p {
+    color: #c2bfe2;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Container ikon (link <a>) */
+.social-links a {
+    font-size: 2.8rem;
+    transition: color 150ms, transform 150ms;
+    
+    /* Penting: Set warna transparan pada link agar gradient pada ikon muncul */
+    color: transparent; 
+}
+
+/* Styling untuk elemen <i> (Ikon) di dalam link */
+.social-links a i {
+    /* Terapkan gradient yang sama seperti MyPorto */
+    background: linear-gradient(25deg, #eee8f1, #6863a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /* Diperlukan agar transform bekerja pada ikon */
+    transition: transform 150ms;
+}
+
+.social-links a:hover i {
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* --- FOOTER STYLING BARU --- */
+footer {
+    background-color: #242157; /* Warna gelap header/kartu */
+    color: #c2bfe2;
+    text-align: center;
+    padding: 2rem 4%; /* Padding lebih besar dari sebelumnya */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.6); /* Bayangan ke atas */
+    margin-top: auto; /* Memastikan footer berada di bagian bawah */
+    border-top: 3px solid #5f5aa7; /* Garis pemisah yang halus */
+}
+
+footer p {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+
+/* --- MEDIA QUERIES (Responsiveness) --- */
+/* Tablet and Desktop Layouts (>= 768px) */
+@media (min-width: 768px) {
+    header {
+        padding: 1rem 8%; /* Padding lebih besar di desktop */
+    }
+    
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Dua kolom untuk Name fields */
+    .name-fields .form-group {
+        flex: 1 1 calc(50% - 0.75rem); /* Memberi ruang antar kolom */
+    }
+}
+
+/* Mobile Layouts (<= 964px) */
+@media (max-width: 964px) {
+    header {
+        flex-direction: column;
+        padding: 1.5rem 4%;
+    }
+    
+    nav {
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+
+    .link {
+        font-size: 1.6rem;
+    }
+
+    .contact-card {
+        padding: 2.5rem;
+        border-radius: 1.5rem;
+    }
+    
+    .title-section h1 {
+        font-size: 4rem;
+    }
+}
+
+/* Very Small Mobile (<= 480px) */
+@media (max-width: 480px) {
+    .title-section h1 {
+        font-size: 3rem;
+    }
+    .contact-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .name-fields {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    /* Mengembalikan name fields ke full width di layar sangat kecil */
+    .name-fields .form-group {
+        flex: 1 1 100%;
+    }
+
+    .submit-button {
+        font-size: 1.6rem;
+    }
+    
+    footer {
+        padding: 1.5rem 4%;
+    }
+    
+    footer p {
+        font-size: 1.2rem;
+    }
+}
